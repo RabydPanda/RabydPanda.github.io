@@ -21,9 +21,12 @@ var livecheckoptions = { method: 'GET',
 */
 
 $(document).ready(function() {
+    $('#teammembers').append('<div>FAIL</div>');
     fs.readFile('../JSON/config.json', 'utf-8', function (err, data) {
-        if (err)
+        if (err) {
+            $('#teamname').append('FAIL');
             return console.error(err);
+        }
         else {
           var name = JSON.parse(data)
             $('#teamname').append(name.teamname);
