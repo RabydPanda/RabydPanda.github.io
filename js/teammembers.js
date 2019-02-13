@@ -22,6 +22,7 @@ var livecheckoptions = { method: 'GET',
 
 $(document).ready(function() {
     $('#teammembers').append('<div>FAIL</div>');
+/*
     fs.readFile('../JSON/config.json', 'utf-8', function (err, data) {
         if (err) {
             $('#teamname').append('FAIL');
@@ -32,5 +33,6 @@ $(document).ready(function() {
             $('#teamname').append(name.teamname);
         }
     });
+    */
 });
 
