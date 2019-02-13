@@ -28,7 +28,7 @@ teamcallback = function (error, response, body) {
 //	var req = request(teamoptions, teamcallback);
 //});
 
-$(document).done(function(){
+$(document).ready(function(){
     $team = $("#team-header");
     $team.append("Welcome");
 });
