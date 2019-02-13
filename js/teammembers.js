@@ -29,8 +29,7 @@ $(document).ready(function(){
     	var parsedTeamData = JSON.parse(body);
 
     	$team = $('#team-members');
-    	parsedTeamData.users.forEach(function(){
-		    $team.append('NameX');
-	    })
+	    $team.append('NameX');
+
 	});
 };
