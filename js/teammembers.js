@@ -17,11 +17,7 @@ var livecheckoptions = { method: 'GET',
         	'Accept': 'application/vnd.twitchtv.v5+json',
             'Client-ID': 'uflpzu6capd5fy7q1eliihjz8dd1yd' } };
 
-$('#teammembers').remove();
-
 $(document).ready(function() {
-fs.readFile('../JSON/config.json', 'utf-8', function (err, data) {
-    json.parse(data);
     $('#teamname').remove();
 });
 
