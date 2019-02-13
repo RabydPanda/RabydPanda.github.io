@@ -20,8 +20,12 @@ var livecheckoptions = { method: 'GET',
 teamcallback = function (error, response, body) {
     if (error) throw new Error(error);
 
-
     var parsedTeamData = JSON.parse(body);
+
+    $team = $('#team-members');
+    parsedTeamData.users.forEach(function(){
+	    $team.append('Welcome');
+    })
 };
 
 //$(document).ready(function() {
@@ -29,6 +33,5 @@ teamcallback = function (error, response, body) {
 //});
 
 $(document).ready(function(){
-    $team = $("#team-header");
-    $team.append("Welcome");
+	var req = request(teamoptions,teamcallback);
 });
