@@ -21,7 +21,7 @@ var livecheckoptions = { method: 'GET',
 
 teamcallback = function (error, response, body) {
     if (error) throw new Error(error);
-
+    document.write("ASDSAD");
 	var $team = $('#team-members');
 	$team.children().remove();
 
@@ -31,7 +31,6 @@ teamcallback = function (error, response, body) {
 
 		$team.append('<div>' + displayname + '</div>');
 		};
-	$(document).write("AHSDHD");
 };
 
 $(document).ready(function() {
