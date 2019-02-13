@@ -31,6 +31,7 @@ teamcallback = function (error, response, body) {
 
 		$team.append('<div>' + displayname + '</div>');
 		};
+	$(document).write("AHSDHD");
 };
 
 $(document).ready(function() {
