@@ -22,16 +22,17 @@ var livecheckoptions = { method: 'GET',
 teamcallback = function (error, response, body) {
     if (error) throw new Error(error);
 
-//	var $team = $('#team-members');
-//	$team.children().remove();
+	var $team = $('#team-members');
+	$team.children().remove();
 
     var parsedTeamData = JSON.parse(body);
 
 	parsedTeamData.users.forEach(function (displayname){
-//		var $div = $('<div>' + displayname);
-//		$team.append($div);
+
+		$team.append('<div>' + displayname + '</div>');
 		};
 };
 
-
-var req = request(teamoptions, teamcallback);
+$(document).ready(function() {
+	var req = request(teamoptions, teamcallback);
+});
