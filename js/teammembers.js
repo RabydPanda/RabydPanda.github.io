@@ -1,10 +1,10 @@
 /*
 Get team members for requested Twitch stream team
 */
+var fs = require("fs");
 
-var teamname = document.currentScript.getAttribute('team');
 var teamoptions = { method: 'GET',
-    url: 'https://api.twitch.tv/kraken/teams/sanitariumgaming',
+    url: 'https://api.twitch.tv/kraken/teams/',
     headers:
         { 
         	'Accept': 'application/vnd.twitchtv.v5+json',
@@ -17,22 +17,10 @@ var livecheckoptions = { method: 'GET',
         	'Accept': 'application/vnd.twitchtv.v5+json',
             'Client-ID': 'uflpzu6capd5fy7q1eliihjz8dd1yd' } };
 
+$(document).ready(function() {
+fs.readFile('../JSON/config.json', 'utf-8', function (err, data) {
+    json.parse(data);
+    $("#team-name").append(data.teamname);
 
-//$(document).ready(function() {
-//	var req = request(teamoptions, teamcallback);
-//});
-//document.write("Hello");
-$(document).ready(function(){
-    	$('#team-members').append('Name');
-document.write("Hello");
-/*
-	var req = request(teamoptions,function (error, response, body) {
-  		if (error) throw new Error(error);
+});
 
-    	var parsedTeamData = JSON.parse(body);
-
-    	$team = $('#team-members');
-	    $team.append('NameX');
-	});
-*/
-};
