@@ -21,7 +21,7 @@ var livecheckoptions = { method: 'GET',
 */
 
 $(document).ready(function() {
-    fs.readFile('./JSON/config.json', 'utf-8', function (err, data) {
+    fs.readFile('../JSON/config.json', 'utf-8', function (err, data) {
         if (err)
             return console.error(err);
         else {
