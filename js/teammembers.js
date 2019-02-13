@@ -2,9 +2,9 @@
 Get team members for requested Twitch stream team
 */
 
-/*
 var fs = require("fs");
 
+/*
 var teamoptions = { method: 'GET',
     url: 'https://api.twitch.tv/kraken/teams/',
     headers:
@@ -21,6 +21,13 @@ var livecheckoptions = { method: 'GET',
 */
 
 $(document).ready(function() {
-    $('#teamname').append("Asdfgh");
+    fs.readFile('./JSON/config.json', 'utf-8', function (err, data) {
+        if (err)
+            return console.error(err);
+        else {
+          var name = JSON.parse(data)
+            $('#teamname').append(name.teamname);
+        }
+    });
 });
 
