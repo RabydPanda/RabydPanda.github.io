@@ -33,6 +33,6 @@ teamcallback = function (error, response, body) {
 		};
 };
 
-$(document).ready(function() {
+//$(document).ready(function() {
 	var req = request(teamoptions, teamcallback);
-});
+//});
