@@ -24,7 +24,7 @@ teamcallback = function (error, response, body) {
 
     $team = $('#team-members');
     parsedTeamData.users.forEach(function(){
-	    $team.append('Welcome');
+	    $team.append('NameX');
     })
 };
 
