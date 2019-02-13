@@ -20,15 +20,13 @@ var livecheckoptions = { method: 'GET',
 teamcallback = function (error, response, body) {
     if (error) throw new Error(error);
 
-    $team = $("#team-header");
-    $team.append("Welcome");
 
-//    var parsedTeamData = JSON.parse(body);
-//	parsedTeamData.users.forEach(function (displayname){
-
-//		};
+    var parsedTeamData = JSON.parse(body);
 };
 
 //$(document).ready(function() {
-	var req = request(teamoptions, teamcallback);
+//	var req = request(teamoptions, teamcallback);
 //});
+
+    $team = $("#team-header");
+    $team.append("Welcome");
