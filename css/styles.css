@@ -9,7 +9,7 @@ or in the "license" file accompanying this file. This file is distributed on an 
 */
 
 .page-title{
-	color:#bdf1e9;
+	color:#000;
 	font-family:'oswald';
 	text-transform:uppercase;
 	font-size:24px;
@@ -27,7 +27,7 @@ or in the "license" file accompanying this file. This file is distributed on an 
 }
 
 .post_ttl {
-	color:#fff;
+	color:#000;
 	font-family:'oswald';
 	text-transform:uppercase;
 	font-weight:normal;
