@@ -21,9 +21,10 @@ var livecheckoptions = { method: 'GET',
 //$(document).ready(function() {
 //	var req = request(teamoptions, teamcallback);
 //});
-document.write("Hello");
+//document.write("Hello");
 $(document).ready(function(){
     	$('#team-members').append('Name');
+document.write("Hello");
 /*
 	var req = request(teamoptions,function (error, response, body) {
   		if (error) throw new Error(error);
