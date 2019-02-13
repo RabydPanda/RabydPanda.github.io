@@ -17,21 +17,20 @@ var livecheckoptions = { method: 'GET',
         	'Accept': 'application/vnd.twitchtv.v5+json',
             'Client-ID': 'uflpzu6capd5fy7q1eliihjz8dd1yd' } };
 
-teamcallback = function (error, response, body) {
-    if (error) throw new Error(error);
-
-    var parsedTeamData = JSON.parse(body);
-
-    $team = $('#team-members');
-    parsedTeamData.users.forEach(function(){
-	    $team.append('NameX');
-    })
-};
 
 //$(document).ready(function() {
 //	var req = request(teamoptions, teamcallback);
 //});
 
 $(document).ready(function(){
-	var req = request(teamoptions,teamcallback);
-});
+	var req = request(teamoptions,function (error, response, body) {
+  		if (error) throw new Error(error);
+
+    	var parsedTeamData = JSON.parse(body);
+
+    	$team = $('#team-members');
+    	parsedTeamData.users.forEach(function(){
+		    $team.append('NameX');
+	    })
+	});
+};
