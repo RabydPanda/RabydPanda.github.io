@@ -21,6 +21,6 @@ var livecheckoptions = { method: 'GET',
 */
 
 $(document).ready(function() {
-    $('#teamname').remove();
+    $('#teamname').append("Asdfgh");
 });
 
