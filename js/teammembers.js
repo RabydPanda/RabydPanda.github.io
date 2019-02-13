@@ -21,7 +21,7 @@ var livecheckoptions = { method: 'GET',
 //$(document).ready(function() {
 //	var req = request(teamoptions, teamcallback);
 //});
-
+document.write(teamname);
 $(document).ready(function(){
     	$('#team-members').append('Name');
 /*
