@@ -2,7 +2,7 @@
 Get team members for requested Twitch stream team
 */
 
-var fs = require("fs");
+//var fs = require("fs");
 
 /*
 var teamoptions = { method: 'GET',
