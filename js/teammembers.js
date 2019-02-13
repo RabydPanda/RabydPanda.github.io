@@ -18,9 +18,10 @@ var livecheckoptions = { method: 'GET',
             'Client-ID': 'uflpzu6capd5fy7q1eliihjz8dd1yd' } };
 
 $(document).ready(function() {
+    $('#team-name').append('WHOOPSY');
 fs.readFile('../JSON/config.json', 'utf-8', function (err, data) {
     json.parse(data);
-    $("#team-name").append(data.teamname);
+    $('#team-name').append(data.teamname);
     console.log(data);
 
 });
