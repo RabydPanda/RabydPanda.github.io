@@ -23,8 +23,7 @@ var livecheckoptions = { method: 'GET',
 //});
 
 $(document).ready(function(){
-    	$team = $('#team-members');
-	    $team.append('NameX');
+    	$('#team-members').append('Name');
 /*
 	var req = request(teamoptions,function (error, response, body) {
   		if (error) throw new Error(error);
