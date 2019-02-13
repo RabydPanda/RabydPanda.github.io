@@ -5,7 +5,6 @@ Get team members for requested Twitch stream team
 var teamname = document.currentScript.getAttribute('team');
 var teamoptions = { method: 'GET',
     url: 'https://api.twitch.tv/kraken/teams/sanitariumgaming',
-    qs: { game: 'Fortnite', offset: '0', limit: '2' },
     headers:
         { 
         	'Accept': 'application/vnd.twitchtv.v5+json',
@@ -13,7 +12,6 @@ var teamoptions = { method: 'GET',
 
 var livecheckoptions = { method: 'GET',
     url: 'https://api.twitch.tv/kraken/streams/',
-    qs: { game: 'Fortnite', offset: '0', limit: '2' },
     headers:
         { 
         	'Accept': 'application/vnd.twitchtv.v5+json',
@@ -21,16 +19,14 @@ var livecheckoptions = { method: 'GET',
 
 teamcallback = function (error, response, body) {
     if (error) throw new Error(error);
-    document.write("ASDSAD");
-	var $team = $('#team-members');
-	$team.children().remove();
 
-    var parsedTeamData = JSON.parse(body);
+    $team = $("#team-header");
+    $team.append("Welcome");
 
-	parsedTeamData.users.forEach(function (displayname){
+//    var parsedTeamData = JSON.parse(body);
+//	parsedTeamData.users.forEach(function (displayname){
 
-		$team.append('<div>' + displayname + '</div>');
-		};
+//		};
 };
 
 //$(document).ready(function() {
