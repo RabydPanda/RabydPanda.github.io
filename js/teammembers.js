@@ -21,6 +21,7 @@ $(document).ready(function() {
 fs.readFile('../JSON/config.json', 'utf-8', function (err, data) {
     json.parse(data);
     $("#team-name").append(data.teamname);
+    console.log(data);
 
 });
 
