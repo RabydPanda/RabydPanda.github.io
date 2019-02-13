@@ -21,21 +21,17 @@ var livecheckoptions = { method: 'GET',
 
 teamcallback = function (error, response, body) {
     if (error) throw new Error(error);
-    var parsedTeamData = JSON.parse(bdoy);
-//    console.log(parsedTeamData.users.length)
-      		var i, streamers, tagline;
-      		streamers = 'Sanitarium Stream Team Members : '
-      		for ( i = 0; i < parsedTeamData.users.length; i++){
-  				streamername = parsedTeamData.users[i].display_name;
-//				console.log(streamername);
-				if (i > 0)
-					streamers = streamers + ", ";
-       			streamers = streamers + parsedTeamData.users[i].display_name ;
-//            	console.log(parsedTeamData.users[i].display_name);
-    	  	};
-//           	console.log(streamers);
-//            console.log(JSON.parse(data));
+
+	var $team = $('#team-members');
+	$team.children().remove();
+
+    var parsedTeamData = JSON.parse(body);
+
+	parsedTeamData.users.forEach(function (displayname){
+		var $div = $('<div>' + displayname);
+		$team.append($div);
+		};
 };
 
 
-var req = request(teamoptions, teamcallback).end();
+var req = request(teamoptions, teamcallback);
